@@ -2,7 +2,7 @@
 /*
 Plugin Name: Pastel Wedding Theme Bundle
 Plugin URI: https://mintplugins.com
-Description: A beautiful, clean-cut, and simple 1-page layout with everything a Pastel Wedding/Lawn-Care business needs.
+Description: A beautiful and simple Pastel-Styled Wedding Theme for WordPress.
 Version: 1.0.0.6
 Author: Mint Plugins
 Author URI: http://mintplugins.com
@@ -238,8 +238,8 @@ function pastel_wedding_theme_bundle_dependencies_array(){
 		'mp_stacks_forms_textdomain' => 'mp-stacks-forms-check.php',
 		'mp_stacks_gallery_textdomain' => 'mp-stacks-gallery-check.php',
 		'mp_stacks_googlefonts_textdomain' => 'mp-stacks-googlefonts-check.php',
+		'mp_stacks_googlemaps_textdomain' => 'mp-stacks-googlemaps-check.php',
 		'mp_stacks_parallax_textdomain' => 'mp-stacks-parallax-check.php',
-		'mp_stacks_shadows_textdomain' => 'mp-stacks-shadows-check.php',
 		'mp_stacks_slider_textdomain' => 'mp-stacks-slider-check.php',
 	
 	

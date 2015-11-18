@@ -33,7 +33,7 @@ if (!function_exists('mp_stacks_parallax_plugin_check')){
 				'plugin_info_link' => 'http://mintplugins.com/plugins/mp-stacks',
 				'plugin_group_install' => true,
 				'plugin_licensed' => true,
-				'plugin_licensed_parent_name' => 'hsgrgjhsg',
+				'plugin_licensed_parent_name' => 'Pastel Wedding Theme Bundle',
 				'plugin_required' => true,
 				'plugin_wp_repo' => false,
 			)

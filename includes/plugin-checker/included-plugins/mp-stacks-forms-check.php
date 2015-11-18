@@ -33,7 +33,7 @@ if (!function_exists('mp_stacks_forms_plugin_check')){
 				'plugin_info_link' => 'http://mintplugins.com/plugins/mp-stacks-forms',
 				'plugin_group_install' => true,
 				'plugin_licensed' => false,
-				'plugin_licensed_parent_name' => 'hsgrgjhsg',
+				'plugin_licensed_parent_name' => 'Pastel Wedding Theme Bundle',
 				'plugin_required' => true,
 				'plugin_wp_repo' => false,
 			)

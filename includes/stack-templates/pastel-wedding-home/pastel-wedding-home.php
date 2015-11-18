@@ -16,7 +16,7 @@
  /**
  * If required add-ons aren't active, stop and install it now
  */
-if (!function_exists('mp_stacks_animation_textdomain') || !function_exists('mp_stacks_forms_textdomain') || !function_exists('mp_stacks_gallery_textdomain') || !function_exists('mp_stacks_googlefonts_textdomain') || !function_exists('mp_stacks_parallax_textdomain') || !function_exists('mp_stacks_shadows_textdomain') || !function_exists('mp_stacks_slider_textdomain')){
+if (!function_exists('mp_stacks_animation_textdomain') || !function_exists('mp_stacks_forms_textdomain') || !function_exists('mp_stacks_gallery_textdomain') || !function_exists('mp_stacks_googlefonts_textdomain') || !function_exists('mp_stacks_googlemaps_textdomain') || !function_exists('mp_stacks_parallax_textdomain') || !function_exists('mp_stacks_slider_textdomain')){
 					
 	/**
 	 * Check if mp_stacks_animation is installed
@@ -47,16 +47,16 @@ if (!function_exists('mp_stacks_animation_textdomain') || !function_exists('mp_s
 	
 					
 	/**
-	 * Check if mp_stacks_parallax is installed
+	 * Check if mp_stacks_googlemaps is installed
 	 */
-	require( plugin_dir_path(__FILE__) . 'required-add-ons/mp-stacks-parallax-check.php' ); 
+	require( plugin_dir_path(__FILE__) . 'required-add-ons/mp-stacks-googlemaps-check.php' ); 
 		
 	
 					
 	/**
-	 * Check if mp_stacks_shadows is installed
+	 * Check if mp_stacks_parallax is installed
 	 */
-	require( plugin_dir_path(__FILE__) . 'required-add-ons/mp-stacks-shadows-check.php' ); 
+	require( plugin_dir_path(__FILE__) . 'required-add-ons/mp-stacks-parallax-check.php' ); 
 		
 	
 					
@@ -87,9 +87,9 @@ else{
 			'template_slug' => 'pastel_wedding_home',
 			'template_title' => __( 'Home', 'pastel_wedding_theme_bundle' ),
 			'template_description' => __('', 'pastel_wedding_theme_bundle' ),
-			'template_tags' => '',
+			'template_tags' => 'Wedding, Home',
 			'template_preview_img' => plugins_url( '/images/preview_thumbnail.jpg', __FILE__ ),
-			'template_demo_url' => '',
+			'template_demo_url' => 'http://demo.mintplugins.com/pastel-wedding-theme-bundle/',
 		);
 		
 		return $installed_templates;
@@ -108,7 +108,7 @@ else{
 	 */
 	function mp_stacks_templates_pastel_wedding_home_to_default_stacks( $default_stacks_to_create ){ 
 				
-		$default_stacks_to_create['page']['pastel_wedding_home'] = array( 'title' => 'Home','page_template' => 'default', );
+		$default_stacks_to_create['page']['pastel_wedding_home'] = array( 'title' => 'Pastel Wedding - Home','is_home' => true,'page_template' => 'default', );
 		
 		return $default_stacks_to_create;
 	
@@ -135,7 +135,7 @@ else{
       'mp_stack_order' => 1000,
       '_edit_lock' => 
       array (
-        'value' => '1447382903:3',
+        'value' => '1447872950:3',
       ),
       '_edit_last' => 
       array (
@@ -151,8 +151,7 @@ else{
       ),
       'brick_bg_image' => 
       array (
-        'value' => 'header-image-6.jpg',
-        'attachment' => true,
+        'value' => 'http://demo.mintplugins.com/pattern-wedding-theme-bundle/wp-content/uploads/sites/11/2015/11/header-image-6.jpg',
       ),
       'mp_stacks_singletext_content_type_repeater' => 
       array (
@@ -167,17 +166,17 @@ else{
             ),
             'brick_text_font_size' => 
             array (
-              'value' => '110',
+              'value' => '0',
               'attachment' => false,
             ),
             'brick_text_line_height' => 
             array (
-              'value' => '',
+              'value' => '0',
               'attachment' => false,
             ),
             'brick_text_paragraph_margin_bottom' => 
             array (
-              'value' => '-60',
+              'value' => '0',
               'attachment' => false,
             ),
             'brick_text_color_tablet' => 
@@ -237,8 +236,7 @@ else{
             ),
             'brick_text' => 
             array (
-              'value' => '&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-91&quot; src=&quot;were-getting-married-turquoise.png&quot; alt=&quot;were-getting-married-turquoise&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-91&quot; src=&quot;were-getting-married-turquoise.png&quot; alt=&quot;were-getting-married-turquoise&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+              'value' => '&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-95&quot; src=&quot;were-getting-married-turquoise1.png&quot; alt=&quot;were-getting-married-turquoise&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 ',
               'attachment' => true,
             ),
@@ -252,7 +250,7 @@ else{
             ),
             'brick_text_font_size' => 
             array (
-              'value' => '28',
+              'value' => '24',
               'attachment' => false,
             ),
             'brick_text_line_height' => 
@@ -317,12 +315,12 @@ else{
             ),
             'brick_text_google_font_weight_style' => 
             array (
-              'value' => '200',
+              'value' => '300',
               'attachment' => false,
             ),
             'brick_text' => 
             array (
-              'value' => '&lt;p style=&quot;text-align: center;&quot;&gt;July 9, 2015 | 655 Wedding St. Toronto On. | 2:00PM&lt;/p&gt;
+              'value' => '&lt;p style=&quot;text-align: center;&quot;&gt;Philip &amp; Jessica&lt;br /&gt;July 9, 2015 | 655 Wedding St. &lt;br /&gt;Toronto On. | 2:00PM&lt;/p&gt;
 ',
               'attachment' => false,
             ),
@@ -336,7 +334,7 @@ else{
             ),
             'brick_text_font_size' => 
             array (
-              'value' => '',
+              'value' => '16',
               'attachment' => false,
             ),
             'brick_text_line_height' => 
@@ -406,7 +404,7 @@ else{
             ),
             'brick_text' => 
             array (
-              'value' => '&lt;p style=&quot;text-align: center;&quot;&gt;[mp_button icon=&quot;fa-envelope-o&quot; icon_position=&quot;left&quot; icon_size=&quot;&quot; icon_spacing=&quot;&quot; text=&quot;RSVP&quot; link=&quot;#rsvp&quot; btn_bg=&quot;show&quot; color=&quot;#62c5b2&quot; hover_color=&quot;&quot; text_color=&quot;#ffffff&quot; hover_text_color=&quot;&quot; open_type=&quot;_self&quot; lightbox_width=&quot;500&quot; lightbox_height=&quot;500&quot;][mp_button icon=&quot;fa-heart&quot; icon_position=&quot;left&quot; icon_size=&quot;&quot; icon_spacing=&quot;&quot; text=&quot;Our Story&quot; link=&quot;#our-story&quot; btn_bg=&quot;show&quot; color=&quot;&quot; hover_color=&quot;&quot; text_color=&quot;&quot; hover_text_color=&quot;&quot; open_type=&quot;_self&quot; lightbox_width=&quot;500&quot; lightbox_height=&quot;500&quot;]&lt;/p&gt;
+              'value' => '&lt;p style=&quot;text-align: center;&quot;&gt;[mp_button icon=&quot;fa-envelope-o&quot; icon_position=&quot;left&quot; icon_size=&quot;&quot; icon_spacing=&quot;&quot; text=&quot;RSVP&quot; link=&quot;#rsvp&quot; btn_bg=&quot;show&quot; color=&quot;#62c5b2&quot; hover_color=&quot;&quot; text_color=&quot;#ffffff&quot; hover_text_color=&quot;&quot; open_type=&quot;_self&quot; lightbox_width=&quot;500&quot; lightbox_height=&quot;500&quot;][mp_button icon=&quot;fa-heart&quot; icon_position=&quot;left&quot; icon_size=&quot;&quot; icon_spacing=&quot;&quot; text=&quot;Our Story&quot; link=&quot;#our-story&quot; btn_bg=&quot;show&quot; color=&quot;&quot; hover_color=&quot;&quot; text_color=&quot;&quot; hover_text_color=&quot;&quot; open_type=&quot;_self&quot; lightbox_width=&quot;500&quot; lightbox_height=&quot;500&quot;][mp_button icon=&quot;fa-th-large&quot; icon_position=&quot;left&quot; icon_size=&quot;&quot; icon_spacing=&quot;&quot; text=&quot;Photos&quot; link=&quot;#gallery&quot; btn_bg=&quot;show&quot; color=&quot;&quot; hover_color=&quot;&quot; text_color=&quot;&quot; hover_text_color=&quot;&quot; open_type=&quot;_self&quot; lightbox_width=&quot;500&quot; lightbox_height=&quot;500&quot;][mp_button icon=&quot;fa-gift&quot; icon_position=&quot;left&quot; icon_size=&quot;&quot; icon_spacing=&quot;&quot; text=&quot;Registry&quot; link=&quot;#our-registry&quot; btn_bg=&quot;show&quot; color=&quot;&quot; hover_color=&quot;&quot; text_color=&quot;&quot; hover_text_color=&quot;&quot; open_type=&quot;_self&quot; lightbox_width=&quot;500&quot; lightbox_height=&quot;500&quot;]&lt;/p&gt;
 ',
               'attachment' => false,
             ),
@@ -437,7 +435,7 @@ else{
           array (
             'mp_stacks_slider_image_url' => 
             array (
-              'value' => 'square-1.jpg',
+              'value' => 'couple-9.jpg',
               'attachment' => true,
             ),
             'mp_stacks_slider_video_url' => 
@@ -490,7 +488,7 @@ else{
       ),
       'mp_stacks_slider_height' => 
       array (
-        'value' => '1000',
+        'value' => '',
       ),
       'brick_ct1_waypoint_animation_on' => 
       array (
@@ -680,7 +678,7 @@ else{
             ),
             'translateY' => 
             array (
-              'value' => '10',
+              'value' => '20',
               'attachment' => false,
             ),
             'scale' => 
@@ -693,7 +691,7 @@ else{
           array (
             'animation_length' => 
             array (
-              'value' => '1000',
+              'value' => '1500',
               'attachment' => false,
             ),
             'opacity' => 
@@ -904,7 +902,7 @@ else{
       ),
       'brick_bg_image_opacity' => 
       array (
-        'value' => '80',
+        'value' => '59',
       ),
       'brick_bg_color' => 
       array (
@@ -917,7 +915,7 @@ else{
       'mp_stack_order' => 1010,
       '_edit_lock' => 
       array (
-        'value' => '1447359489:3',
+        'value' => '1447782228:3',
       ),
       '_edit_last' => 
       array (
@@ -951,12 +949,12 @@ else{
           array (
             'brick_text_color' => 
             array (
-              'value' => '#56a495',
+              'value' => '#62c5b2',
               'attachment' => false,
             ),
             'brick_text_font_size' => 
             array (
-              'value' => '15',
+              'value' => '',
               'attachment' => false,
             ),
             'brick_text_line_height' => 
@@ -1040,8 +1038,7 @@ else{
       ),
       'brick_main_image' => 
       array (
-        'value' => 'our-story-banner-2.png',
-        'attachment' => true,
+        'value' => 'http://demo.mintplugins.com/pattern-wedding-theme-bundle/wp-content/uploads/sites/11/2015/11/our-story-banner-2.png',
       ),
       'brick_alignment' => 
       array (
@@ -1051,6 +1048,342 @@ else{
       array (
         'value' => '45',
       ),
+      'brick_ct1_waypoint_animation_on' => 
+      array (
+        'value' => 'brick_ct1_waypoint_animation_on',
+      ),
+      'ct1_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+          1 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct1_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => 'brick_ct1_waypoint_animation_reverse_upon_out',
+      ),
+      'brick_ct1_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'ct1_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct2_waypoint_animation_on' => 
+      array (
+        'value' => 'brick_ct2_waypoint_animation_on',
+      ),
+      'ct2_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+          1 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '1000',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct2_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => 'brick_ct2_waypoint_animation_reverse_upon_out',
+      ),
+      'brick_ct2_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'ct2_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_bg_waypoint_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'bg_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_bg_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => '',
+      ),
+      'brick_bg_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'bg_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
     ),
     'brick_3' => 
     array (
@@ -1058,7 +1391,7 @@ else{
       'mp_stack_order' => 1020,
       '_edit_lock' => 
       array (
-        'value' => '1447349978:3',
+        'value' => '1447782246:3',
       ),
       '_edit_last' => 
       array (
@@ -1070,8 +1403,7 @@ else{
       ),
       'brick_bg_image' => 
       array (
-        'value' => 'header-image-5.jpg',
-        'attachment' => true,
+        'value' => 'http://demo.mintplugins.com/pattern-wedding-theme-bundle/wp-content/uploads/sites/11/2015/11/header-image-5.jpg',
       ),
       'mp_stack_id' => 
       array (
@@ -1094,12 +1426,12 @@ else{
             ),
             'brick_text_font_size' => 
             array (
-              'value' => '200',
+              'value' => '0',
               'attachment' => false,
             ),
             'brick_text_line_height' => 
             array (
-              'value' => '',
+              'value' => '0',
               'attachment' => false,
             ),
             'brick_text_paragraph_margin_bottom' => 
@@ -1164,7 +1496,343 @@ else{
             ),
             'brick_text' => 
             array (
-              'value' => '&lt;p&gt;RSVP&lt;/p&gt;
+              'value' => '&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-96&quot; src=&quot;rsvp-turquoise.png&quot; alt=&quot;rsvp-turquoise&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+',
+              'attachment' => true,
+            ),
+          ),
+          1 => 
+          array (
+            'brick_text_color' => 
+            array (
+              'value' => '#62c5b2',
+              'attachment' => false,
+            ),
+            'brick_text_font_size' => 
+            array (
+              'value' => '35',
+              'attachment' => false,
+            ),
+            'brick_text_line_height' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_laptop' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_google_font' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_google_font_weight_style' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text' => 
+            array (
+              'value' => '&lt;p style=&quot;text-align: center;&quot;&gt;Ceremony&lt;/p&gt;
+',
+              'attachment' => false,
+            ),
+          ),
+          2 => 
+          array (
+            'brick_text_color' => 
+            array (
+              'value' => '#62c5b2',
+              'attachment' => false,
+            ),
+            'brick_text_font_size' => 
+            array (
+              'value' => '17',
+              'attachment' => false,
+            ),
+            'brick_text_line_height' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_laptop' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_google_font' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_google_font_weight_style' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text' => 
+            array (
+              'value' => '&lt;p style=&quot;text-align: center;&quot;&gt;July 9, 2015 | 655 Wedding St. Toronto On. | 2:00PM&lt;/p&gt;
+',
+              'attachment' => false,
+            ),
+          ),
+          3 => 
+          array (
+            'brick_text_color' => 
+            array (
+              'value' => '#62c5b2',
+              'attachment' => false,
+            ),
+            'brick_text_font_size' => 
+            array (
+              'value' => '35',
+              'attachment' => false,
+            ),
+            'brick_text_line_height' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_laptop' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_google_font' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_google_font_weight_style' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text' => 
+            array (
+              'value' => '&lt;p style=&quot;text-align: center;&quot;&gt;Reception&lt;/p&gt;
+',
+              'attachment' => false,
+            ),
+          ),
+          4 => 
+          array (
+            'brick_text_color' => 
+            array (
+              'value' => '#62c5b2',
+              'attachment' => false,
+            ),
+            'brick_text_font_size' => 
+            array (
+              'value' => '17',
+              'attachment' => false,
+            ),
+            'brick_text_line_height' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_laptop' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_google_font' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_google_font_weight_style' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text' => 
+            array (
+              'value' => '&lt;p style=&quot;text-align: center;&quot;&gt;123 Wedding St. Toronto at 7:00PM&lt;/p&gt;
 ',
               'attachment' => false,
             ),
@@ -1413,11 +2081,11 @@ else{
       ),
       'mp_stacks_forms_field_titles_font_color' => 
       array (
-        'value' => '#475853',
+        'value' => '#62c5b2',
       ),
       'mp_stacks_forms_field_desc_font_color' => 
       array (
-        'value' => '#5f766f',
+        'value' => '#66c4b1',
       ),
       'mp_stacks_forms_submit_button_text_color' => 
       array (
@@ -1425,7 +2093,7 @@ else{
       ),
       'mp_stacks_forms_submit_button_background_color' => 
       array (
-        'value' => '#475853',
+        'value' => '#62c5b2',
       ),
       'mp_stacks_forms_submit_button_hover_text_color' => 
       array (
@@ -1447,6 +2115,358 @@ else{
       array (
         'value' => 'mp_stacks_parallax_on',
       ),
+      'brick_main_image' => 
+      array (
+        'value' => '',
+      ),
+      'brick_bg_image_opacity' => 
+      array (
+        'value' => '69',
+      ),
+      'brick_bg_color' => 
+      array (
+        'value' => '#ffffff',
+      ),
+      'brick_max_width_c2' => 
+      array (
+        'value' => '450',
+      ),
+      'brick_ct1_waypoint_animation_on' => 
+      array (
+        'value' => 'brick_ct1_waypoint_animation_on',
+      ),
+      'ct1_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+          1 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '1500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct1_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => 'brick_ct1_waypoint_animation_reverse_upon_out',
+      ),
+      'brick_ct1_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'ct1_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct2_waypoint_animation_on' => 
+      array (
+        'value' => 'brick_ct2_waypoint_animation_on',
+      ),
+      'ct2_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+          1 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '1500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct2_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => 'brick_ct2_waypoint_animation_reverse_upon_out',
+      ),
+      'brick_ct2_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'ct2_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_bg_waypoint_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'bg_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_bg_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => '',
+      ),
+      'brick_bg_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'bg_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
     ),
     'brick_4' => 
     array (
@@ -1454,7 +2474,7 @@ else{
       'mp_stack_order' => 1030,
       '_edit_lock' => 
       array (
-        'value' => '1447285020:3',
+        'value' => '1447782264:3',
       ),
       '_edit_last' => 
       array (
@@ -1474,7 +2494,7 @@ else{
       ),
       'gallery_wp_gallery_shortcode' => 
       array (
-        'value' => '[mp_stacks_gallery ids="undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71"]',
+        'value' => '[mp_stacks_gallery ids="116,117,121,120,119,118,122"]',
       ),
       'brick_no_borders' => 
       array (
@@ -1488,11 +2508,901 @@ else{
       array (
         'value' => '',
       ),
+      'gallery_flickr_photoset_url' => 
+      array (
+        'value' => 'https://www.flickr.com/photos/zedpromedia/albums/72157648280083691',
+      ),
+      'brick_ct1_shadow_enabled' => 
+      array (
+        'value' => '',
+      ),
+      'brick_ct2_shadow_enabled' => 
+      array (
+        'value' => '',
+      ),
+      'gallery_justified_row_height' => 
+      array (
+        'value' => '240',
+      ),
+      'brick_ct1_waypoint_animation_on' => 
+      array (
+        'value' => 'brick_ct1_waypoint_animation_on',
+      ),
+      'ct1_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+          1 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '1500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct1_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => '',
+      ),
+      'brick_ct1_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'ct1_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct2_waypoint_animation_on' => 
+      array (
+        'value' => 'brick_ct2_waypoint_animation_on',
+      ),
+      'ct2_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct2_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => '',
+      ),
+      'brick_ct2_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'ct2_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_bg_waypoint_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'bg_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_bg_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => '',
+      ),
+      'brick_bg_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'bg_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
     ),
     'brick_5' => 
     array (
-      'brick_title' => '',
+      'brick_title' => 'Our Registry',
       'mp_stack_order' => 1040,
+      '_edit_lock' => 
+      array (
+        'value' => '1447782281:3',
+      ),
+      '_edit_last' => 
+      array (
+        'value' => '3',
+      ),
+      'brick_first_content_type' => 
+      array (
+        'value' => 'image',
+      ),
+      'brick_second_content_type' => 
+      array (
+        'value' => 'singletext',
+      ),
+      'brick_ct1_shadow_enabled' => 
+      array (
+        'value' => '',
+      ),
+      'brick_ct2_shadow_enabled' => 
+      array (
+        'value' => '',
+      ),
+      'brick_no_borders' => 
+      array (
+        'value' => '',
+      ),
+      'brick_bg_image' => 
+      array (
+        'value' => 'http://demo.mintplugins.com/pattern-wedding-theme-bundle/wp-content/uploads/sites/11/2015/11/header-image-6.jpg',
+      ),
+      'mp_stacks_singletext_content_type_repeater' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'brick_text_color' => 
+            array (
+              'value' => '#62c5b2',
+              'attachment' => false,
+            ),
+            'brick_text_font_size' => 
+            array (
+              'value' => '18',
+              'attachment' => false,
+            ),
+            'brick_text_line_height' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_laptop' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_google_font' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_google_font_weight_style' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text' => 
+            array (
+              'value' => '&lt;p&gt;We are so honored to have you come and help us celebrate our marriage! We can&#039;t wait to start our new life together. If you&#039;d like to help us on our new journey, we have set up a registry for some items we would like to have in our new home.&lt;/p&gt;
+',
+              'attachment' => false,
+            ),
+          ),
+          1 => 
+          array (
+            'brick_text_color' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_laptop' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_google_font' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_google_font_weight_style' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text' => 
+            array (
+              'value' => '&lt;p&gt;[mp_button icon=&quot;fa-external-link&quot; icon_position=&quot;left&quot; icon_size=&quot;&quot; icon_spacing=&quot;&quot; text=&quot;Browse Our Registry&quot; link=&quot;YOUR_REGISTRY_URL_HERE&quot; btn_bg=&quot;show&quot; color=&quot;&quot; hover_color=&quot;&quot; text_color=&quot;&quot; hover_text_color=&quot;&quot; open_type=&quot;_self&quot; lightbox_width=&quot;500&quot; lightbox_height=&quot;500&quot;]&lt;/p&gt;
+',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'mp_stack_id' => 
+      array (
+        'value' => '3',
+      ),
+      'brick_main_image' => 
+      array (
+        'value' => 'http://demo.mintplugins.com/pattern-wedding-theme-bundle/wp-content/uploads/sites/11/2015/11/our-registry-turquoise.png',
+      ),
+      'brick_bg_image_opacity' => 
+      array (
+        'value' => '44',
+      ),
+      'brick_bg_color' => 
+      array (
+        'value' => '#ffffff',
+      ),
+      'mp_stacks_parallax_on' => 
+      array (
+        'value' => 'mp_stacks_parallax_on',
+      ),
+      'brick_ct1_waypoint_animation_on' => 
+      array (
+        'value' => 'brick_ct1_waypoint_animation_on',
+      ),
+      'ct1_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+          1 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '1500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct1_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => 'brick_ct1_waypoint_animation_reverse_upon_out',
+      ),
+      'brick_ct1_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'ct1_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct2_waypoint_animation_on' => 
+      array (
+        'value' => 'brick_ct2_waypoint_animation_on',
+      ),
+      'ct2_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+          1 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '1500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct2_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => 'brick_ct2_waypoint_animation_reverse_upon_out',
+      ),
+      'brick_ct2_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'ct2_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_bg_waypoint_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'bg_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_bg_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => '',
+      ),
+      'brick_bg_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'bg_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+    ),
+    'brick_6' => 
+    array (
+      'brick_title' => 'Additional Information',
+      'mp_stack_order' => 1050,
+      '_edit_lock' => 
+      array (
+        'value' => '1447782315:3',
+      ),
       '_edit_last' => 
       array (
         'value' => '3',
@@ -1500,6 +3410,10 @@ else{
       'brick_first_content_type' => 
       array (
         'value' => 'singletext',
+      ),
+      'brick_alignment' => 
+      array (
+        'value' => 'centered',
       ),
       'brick_ct1_shadow_enabled' => 
       array (
@@ -1521,7 +3435,7 @@ else{
           array (
             'brick_text_color' => 
             array (
-              'value' => '',
+              'value' => '#62c5b2',
               'attachment' => false,
             ),
             'brick_text_font_size' => 
@@ -1596,7 +3510,91 @@ else{
             ),
             'brick_text' => 
             array (
-              'value' => '&lt;p&gt;[mp_stack stack=&quot;2&quot;]&lt;/p&gt;
+              'value' => '&lt;p&gt;Additional Information&lt;/p&gt;
+',
+              'attachment' => false,
+            ),
+          ),
+          1 => 
+          array (
+            'brick_text_color' => 
+            array (
+              'value' => '#62c5b2',
+              'attachment' => false,
+            ),
+            'brick_text_font_size' => 
+            array (
+              'value' => '18',
+              'attachment' => false,
+            ),
+            'brick_text_line_height' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom_tablet' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_laptop' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_color_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_font_size_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_line_height_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_paragraph_margin_bottom_mobile' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_google_font' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text_google_font_weight_style' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'brick_text' => 
+            array (
+              'value' => '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non molestie diam, sed feugiat orci. Duis semper enim luctus odio facilisis, vestibulum venenatis ipsum sagittis. Pellentesque eu lectus placerat, placerat leo eget, consectetur elit. Curabitur eleifend nunc et efficitur pellentesque. Nulla consectetur magna ac tortor scelerisque, ac ullamcorper leo scelerisque. Donec tincidunt rhoncus turpis. Nulla eu eros ut nibh pharetra blandit sed a massa. Etiam vehicula ullamcorper magna, maximus fermentum ligula cursus sed. Ut sodales tempus sem, quis venenatis dui egestas et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu massa ut est tristique condimentum.&lt;/p&gt;
 ',
               'attachment' => false,
             ),
@@ -1607,9 +3605,373 @@ else{
       array (
         'value' => '3',
       ),
+      'brick_ct1_waypoint_animation_on' => 
+      array (
+        'value' => 'brick_ct1_waypoint_animation_on',
+      ),
+      'ct1_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct1_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => '',
+      ),
+      'brick_ct1_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'ct1_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct2_waypoint_animation_on' => 
+      array (
+        'value' => 'brick_ct2_waypoint_animation_on',
+      ),
+      'ct2_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct2_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => '',
+      ),
+      'brick_ct2_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'ct2_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_bg_waypoint_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'bg_waypoint_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_bg_waypoint_animation_reverse_upon_out' => 
+      array (
+        'value' => '',
+      ),
+      'brick_bg_mouseover_animation_on' => 
+      array (
+        'value' => '',
+      ),
+      'bg_mouseover_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'opacity' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+    ),
+    'brick_7' => 
+    array (
+      'brick_title' => 'Google Map',
+      'mp_stack_order' => 1060,
       '_edit_lock' => 
       array (
-        'value' => '1447378794:3',
+        'value' => '1447546862:3',
+      ),
+      '_edit_last' => 
+      array (
+        'value' => '3',
+      ),
+      'brick_first_content_type' => 
+      array (
+        'value' => 'googlemaps',
+      ),
+      'mp_stacks_googlemaps_show_directions' => 
+      array (
+        'value' => '',
+      ),
+      'mp_stacks_googlemaps_markers' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'marker_title' => 
+            array (
+              'value' => 'Our Wedding',
+              'attachment' => false,
+            ),
+            'marker_body_text' => 
+            array (
+              'value' => 'This is the address for our wedding!',
+              'attachment' => false,
+            ),
+            'marker_latitude' => 
+            array (
+              'value' => '43.653226',
+              'attachment' => false,
+            ),
+            'marker_longitude' => 
+            array (
+              'value' => '-79.383184',
+              'attachment' => false,
+            ),
+            'marker_address' => 
+            array (
+              'value' => '655 Wedding St. Toronto On',
+              'attachment' => false,
+            ),
+            'marker_phone_number' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'marker_email' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'marker_image' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'brick_ct1_shadow_enabled' => 
+      array (
+        'value' => '',
+      ),
+      'brick_ct2_shadow_enabled' => 
+      array (
+        'value' => '',
+      ),
+      'brick_no_borders' => 
+      array (
+        'value' => 'brick_no_borders',
+      ),
+      'mp_stack_id' => 
+      array (
+        'value' => '3',
+      ),
+      'brick_alignment' => 
+      array (
+        'value' => 'centered',
+      ),
+      'brick_max_width' => 
+      array (
+        'value' => '99999999',
+      ),
+      'brick_min_above_below' => 
+      array (
+        'value' => '0',
       ),
     ),
   ),
@@ -1656,7 +4018,7 @@ else{
 												$temp_explode_holder = explode( '&quot', $value_explode_result );
 												$img_url = $temp_explode_holder[0];
 												
-												$repeater_meta_option['value'] = str_replace( $img_url, plugins_url( 'images/' . $img_url, __FILE__ ), $repeater_meta_option['value'] );
+												$repeater_meta_option['value'] = str_replace( 'src=&quot;' . $img_url, 'src=&quot;' . plugins_url( 'images/' . $img_url, __FILE__ ), $repeater_meta_option['value'] );
 												
 											}
 										}
@@ -1698,7 +4060,7 @@ else{
 										$temp_explode_holder = explode( '&quot', $value_explode_result );
 										$img_url = $temp_explode_holder[0];
 	
-										$meta_option['value'] = str_replace( $img_url, plugins_url( 'images/' . $img_url, __FILE__ ), $meta_option['value'] );
+										$meta_option['value'] = str_replace( 'src=&quot;' . $img_url, 'src=&quot;' . plugins_url( 'images/' . $img_url, __FILE__ ), $meta_option['value'] );
 										
 									}
 								}

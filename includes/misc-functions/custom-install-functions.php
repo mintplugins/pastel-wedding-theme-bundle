@@ -34,17 +34,20 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  */
 function pastel_wedding_theme_bundle_theme_mods(){
 			
-	return array (
-	
-		 0 => false,
-		  'mp_knapstack_text_color' => '#35591c', 
-		  'mp_knapstack_subtext_color' => '#3c592d', 
-		  'mp_knapstack_font_family' => 'Arvo', 
-		  'mp_knapstack_button_submit' => '#4d7d2a', 
-		  'mp_knapstack_button_hover' => '#347c00', 
-		  'mp_knapstack_form_input_border_radius' => '2', 
-		  'mp_knapstack_form_input_border_thickness' => '2'
-
+	return array ( 
+		0 => false, 
+		'mp_knapstack_button_submit' => '#62c5b2', 
+		'mp_knapstack_button_hover' => '#00c49d', 
+		'mp_knapstack_borders' => '#62c5b2', 
+		'mp_knapstack_secondary_bg_color' => '#62c5b2', 
+		'mp_knapstack_form_input_text_color' => '#565656', 
+		'mp_knapstack_form_input_inactive_color' => '#62c5b2', 
+		'mp_knapstack_form_input_active_color' => '#00c49d', 
+		'mp_knapstack_header_nav_text_color' => '#62c5b2', 
+		'mp_knapstack_text_color' => '#62c5b2', 
+		'mp_core_logo' => 'http://demo.mintplugins.com/pastel-wedding-theme-bundle/wp-content/uploads/sites/11/2015/11/logo-placeholder.png', 
+		'mp_core_logo_width' => '100', 
+		'mp_core_logo_height' => '100', 
 	);
 	
 }
