@@ -48,6 +48,7 @@ function pastel_wedding_theme_bundle_theme_mods(){
 		'mp_core_logo' => 'http://demo.mintplugins.com/pastel-wedding-theme-bundle/wp-content/uploads/sites/11/2015/11/logo-placeholder.png', 
 		'mp_core_logo_width' => '100', 
 		'mp_core_logo_height' => '100', 
+		'mp_stacks_footer_stack' => 'none'
 	);
 	
 }
