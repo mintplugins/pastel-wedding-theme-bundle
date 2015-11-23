@@ -126,7 +126,7 @@ else{
 	
 		$template_array = array (
   'stack_title' => '',
-  'stack_description' => 'Created using: ',
+  'stack_description' => 'Created using: The Pastel Wedding Theme Bundle',
   'stack_bricks' => 
   array (
     'brick_1' => 
