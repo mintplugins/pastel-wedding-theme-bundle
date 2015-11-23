@@ -3,7 +3,7 @@
 Plugin Name: Pastel Wedding Theme Bundle
 Plugin URI: https://mintplugins.com
 Description: A beautiful and simple Pastel-Styled Wedding Theme for WordPress.
-Version: 1.0.0.0
+Version: 1.0.0.1
 Author: Mint Plugins
 Author URI: http://mintplugins.com
 Text Domain: pastel_wedding_theme_bundle
@@ -34,7 +34,7 @@ License: GPL2
 */
 // Plugin version
 if( !defined( 'PASTEL_WEDDING_THEME_BUNDLE_VERSION' ) )
-	define( 'PASTEL_WEDDING_THEME_BUNDLE_VERSION', '1.0.0.0' );
+	define( 'PASTEL_WEDDING_THEME_BUNDLE_VERSION', '1.0.0.1' );
 
 // Plugin Folder URL
 if( !defined( 'PASTEL_WEDDING_THEME_BUNDLE_PLUGIN_URL' ) )

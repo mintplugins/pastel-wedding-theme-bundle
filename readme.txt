@@ -4,7 +4,7 @@ Donate link: http://mintplugins.com/
 Tags: page, builder, stacks, bricks
 Requires at least: 3.5
 Tested up to: 4.3
-Stable tag: 1.0.0.0
+Stable tag: 1.0.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,10 @@ See full instructions at http://mintplugins.com/doc/pastel-wedding-theme-bundle
 
 
 == Changelog ==
+
+= 1.0.0.1 = November 22, 2015
+* Make it so the license validity is re-checked upon installation. This makes for a much smoother experience if the license is expired but bundle is re-installed.
+* Added A description to the Main Stack.
 
 = 1.0.0.0 = November 18, 2015
 * Original release
