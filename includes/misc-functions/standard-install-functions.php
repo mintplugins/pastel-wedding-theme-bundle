@@ -71,6 +71,9 @@ function pastel_wedding_theme_bundle_install() {
 	//Save our mp_stacks_options - since we've just activated and changed some of them
 	update_option( 'mp_core_options', $mp_core_options );
 	
+	//Make it so that the license validity is set to false so that it re-checks. This makes for a much smoother experience if the license is expired but bundle is re-installed.
+	update_option( str_replace("_", "-", $mp_core_options['mp_stacks_theme_bundle_being_installed']['theme_bundle_slug'] ) . '_license_status_valid' );
+	
 	$active_theme = wp_get_theme();
 	
 	//Notify
