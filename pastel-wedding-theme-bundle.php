@@ -150,7 +150,7 @@ function pastel_wedding_theme_bundle_include_files(){
 			
 				
 		}
-		//If MP Stacks or Knapstack aren't installed
+		//If required/included plugins aren't installed
 		elseif( !pastel_wedding_theme_bundle_dependencies() ) {
 			
 			/**
